@@ -1,59 +1,70 @@
-import './App.css'
-import Jomuna from './jomuna';
+import './App.css';
+import Jomuna from './Jomuna';
+import Players from './Players';
+import Brand from './Brand';
+import Count from './Count';
+import Score from './Score';
 
-
-function App() {
-  return (
-    <>
-      <h1>Hello Programmer</h1>
-      <Person></Person>
-      <School name = 'Railway school'></School>
-      <Resturent name ='hajir birani' age ='28'  ></Resturent>
-      <Paper></Paper>
-      <Jomuna name ='jomuna' price = '3000tk'></Jomuna>
-    </>
-  )
-}
 
 function Person() {
-  const name = 'bangaldesh';
-  const age =1991;
+  const name = 'Bangladesh';
+  const age = 1991;
   return (
     <div className='man'>
       <h2>{name}</h2>
-      <p>{name} is born in {age}</p>
+      <p>{name} was born in {age}</p>
     </div>
-  )
+  );
 }
 
-const {name} ={name: 'railway school'}
-function School({name}) {
+function School({ name }) {
   console.log(name);
   return (
     <div className='man'>
       <h1>{name}</h1>
       <p>Railway Colony, Sirajganj</p>
     </div>
-  )
+  );
 }
 
-function Resturent({name , age}) {
+function Restaurant({ name, age }) {
   return (
     <div className='man'>
       <h1>{name}</h1>
-      <p>Established {age}</p>
+      <p>Established in {age}</p>
     </div>
-  )
-}
-function Paper() {
-  const price = 27;
-  const name ='prothom allo';
-  return(
-    <div className='man'>
-      <h1>protom alo</h1>
-      <p>{name} paper price is : {price}tk </p>
-    </div>
-  )
+  );
 }
 
-export default App
+function Paper() {
+  const price = 27;
+  const name = 'Prothom Alo';
+  return (
+    <div className='man'>
+      <h1>{name}</h1>
+      <p>{name} newspaper price: {price} TK</p>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <h1>Hello Programmer</h1>
+      <Person />
+      <School name="Railway School" />
+      <Restaurant name="Hajir Biryani" age="28" />
+      <Paper />
+      <Jomuna name="Jomuna" price="3000 TK" />
+      <Players name ='bangladesh' score ='280' />
+      <Brand name ='apple' price = '120000'/>
+      <Count/>
+      <Score/>
+
+
+    </>
+  );
+}
+
+export default App;
+
